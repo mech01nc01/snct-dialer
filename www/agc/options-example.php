@@ -89,4 +89,10 @@ $INSERT_agent_events	= '';	# inserted within the agent_events function
 $OnlyInbounds = 0; # Used in vdc_db_query to display only AGENTDIRECT inbounds in call log
 $OverWriteAfterCallSurvey = 0; # Set to 1 to allow without OptIn
 
+
+$GLOBALS['options']=[];
+$GLOBALS['options']['seclogin']=[];
+$GLOBALS['options']['seclogin']['noLoginAfter']=23; // no login allowed after hour x of the day (default=23)
+$GLOBALS['options']['seclogin']['auth']=['type' => 'db']; // ['type' => 'db'] = standard auth vocidial-user (default) | ['type' => 'ldap','server' => '1.1.1.1', 'basedn' => 'DC=domain,DC=com', 'realm' => 'domain.com','groupMembershipAttribute' => 'memberOf', 'allowedGroups' => ['Groupname1']] auth against an ldap-server
+
 ?>
